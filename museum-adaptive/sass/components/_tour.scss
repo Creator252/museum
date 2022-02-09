@@ -1,0 +1,184 @@
+.tour {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    @include media-laptop {
+        padding-top: 51px;
+        padding-bottom: 57px;
+    }
+
+    @include media-tablet {
+        padding-top: 35px;
+        padding-bottom: 78px;
+    }
+
+    @include media-mobile {
+        padding-top: 39px;
+        padding-bottom: 28px;
+    }
+
+    .header-light {
+
+        @extend %headerl;
+
+        @include media-tablet {
+            font-size: 40px;
+            line-height: 60px;
+            letter-spacing: 5px;
+        }
+
+        @include media-mobile {
+            font-size: 28px;
+            line-height: 40px;
+        }
+
+        &::after {
+            @extend %after;
+            margin-top: 27px;
+
+            @include media-laptop {
+                margin-top: 14px;
+            }
+
+            @include media-tablet {
+                margin-top: 19px;
+            }
+        }
+    }
+
+    .tour-content {
+
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 60px;
+
+        @include media-laptop {
+            column-gap: 106px;
+            justify-content: center;
+        }
+
+        @include media-tablet {
+            column-gap: 55px;
+        }
+
+        .tour-item {
+
+
+            &:hover {
+                .tour-subheader {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .map-frame {
+                padding-top: 75px;
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                max-width: 440px;
+                padding-top: 75px;
+
+                @include media-laptop {
+                    max-width: 330px;
+                    padding-top: 59px;
+                }
+
+                @include media-tablet {
+                    max-width: 280px;
+                    padding-top: 39px;
+                }
+            }
+
+            .tour-subheader {
+                font-family: $Forum;
+                font-size: 32px;
+                line-height: 35px;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                padding-top: 18px;
+
+                @include media-laptop {
+                    font-size: 28px;
+                    line-height: 31px;
+                    font-weight: normal;
+                    letter-spacing: 3px;
+                    padding-top: 21px;
+                }
+
+                @include media-tablet {
+                    font-size: 22px;
+                    line-height: 24px;
+                    letter-spacing: 3px;
+                }
+
+                @include media-mobile {
+                    font-size: 18px;
+                    line-height: 20px;
+                    letter-spacing: 5px;
+                }
+
+                &::after {
+                    @extend %after;
+                    transition: all .5s;
+                    width: 300px;
+                    margin-top: 13px;
+
+                    @include media-laptop {
+                        width: 150px;
+                        margin-top: 11px;
+                    }
+
+                    @include media-tablet {
+                        margin-top: 8px;
+                    }
+
+                    @include media-mobile {
+                        margin-top: 11px;
+                        height: 2px;
+                    }
+                }
+            }
+
+            .vt {
+                font-family: $Roboto;
+                font-weight: 200;
+                font-size: 22px;
+                line-height: 26px;
+                padding-top: 11px;
+
+                @include media-laptop {
+                    font-size: 20px;
+                    line-height: 23px;
+                }
+
+                @include media-tablet {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+
+                @include media-mobile {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+
+            .panorame {
+                font-family: $Roboto;
+                font-weight: 200;
+                font-size: 18px;
+                line-height: 21px;
+                padding-top: 10px;
+
+                @include media-laptop {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+
+}

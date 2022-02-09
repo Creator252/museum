@@ -1,0 +1,217 @@
+.footer {
+    padding: 90px 0 50px 0;
+    background-color: $bg-dark;
+    color: $text-color;
+
+    @include media-laptop {
+        padding: 60px 0 83px 0;
+    }
+
+    @include media-tablet {
+        padding: 51px 0 83px 0;
+    }
+
+    @include media-mobile {
+        padding: 42px 0 83px 0;
+    }
+
+    .footer-logo {
+        background-image: url(/creator252-JSFE2021Q3/museum-adaptive/images/svg/Louvre.svg);
+        background-repeat: no-repeat;
+
+        @include media-mobile {
+            background-size: 29px 16px;
+        }
+    }
+
+    .footer-wrapp {
+        display: flex;
+        justify-content: space-between;
+
+        @include media-laptop {
+            justify-content: space-between;
+        }
+
+        @include media-mobile {
+            flex-direction: column;
+        }
+    }
+
+
+    ul {
+        list-style: none;
+    }
+
+    .footer-text {
+        font-family: $Forum;
+        font-size: 28px;
+        line-height: 31px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        padding-left: 76px;
+
+        @include media-mobile {
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: normal;
+            padding-left: 50px;
+        }
+    }
+
+    .footer-nav-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 131px;
+
+        @include media-mobile {
+            padding-top: 40px;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 2px;
+        }
+
+
+        .footer-nav-list-item {
+            font-family: $Roboto;
+            font-weight: 200;
+            font-size: 22px;
+            line-height: 26px;
+            letter-spacing: 2px;
+            padding-bottom: 17px;
+            padding-right: 150px;
+
+            @include media-laptop {
+                padding-right: 92px;
+            }
+
+            @include media-mobile {
+                padding-bottom: 29px;
+                padding-right: 41px;
+                font-weight: 200;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    .socials {
+
+        align-self: end;
+
+        @include media-laptop {
+            padding-left: 0px;
+        }
+
+
+
+        .socials-item {
+            display: inline-flex;
+            width: 48px;
+            height: 48px;
+            border: 1px solid $text-color;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include media-tablet {
+                margin-top: 157px;
+            }
+
+            &:hover {
+                border: 1px solid $gold-color;
+            }
+
+        }
+    }
+
+    .line {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 3px;
+            width: 100%;
+            max-width: 1920px;
+            background-color: $text-color;
+            margin-top: 50px;
+        }
+    }
+
+    .copyright {
+        font-family: $Roboto;
+        font-weight: 200;
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: 2px;
+    }
+
+    .copyright_second {
+        @include media-mobile {
+            display: none;
+        }
+    }
+}
+
+.youtube {
+    background-image: url(/museum-adaptive/images/svg/Youtube.svg);
+    background-position: 24px 24px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+
+    &:hover {
+        background-image: url(/museum-adaptive/images/svg/Youtube-hover.svg);
+    }
+}
+
+.instagram {
+    background-image: url(/museum-adaptive/images/svg/Instagram.svg);
+    background-position: 24px 24px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+
+    &:hover {
+        background-image: url(/museum-adaptive/images/svg/Instagram-hover.svg);
+    }
+}
+
+.facebook {
+    background-image: url(/museum-adaptive/images/svg/Facebook.svg);
+    background-position: 24px 24px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+
+    &:hover {
+        background-image: url(/museum-adaptive/images/svg/Facebook-hover.svg);
+    }
+}
+
+.twitter {
+    background-image: url(/museum-adaptive/images/svg/Twitter.svg);
+    background-position: 24px 24px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+
+    &:hover {
+        background-image: url(/museum-adaptive/images/svg/Twitter-hover.svg);
+    }
+}
+
+.printerest {
+    background-image: url(/museum-adaptive/images/svg/Pinterest.svg);
+    background-position: 24px 24px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+
+    &:hover {
+        background-image: url(/museum-adaptive/images/svg/Pinterest-hover.svg);
+    }
+}

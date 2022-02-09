@@ -1,0 +1,15 @@
+.parallax-effect {
+    width: 100%;
+    height: 300px;
+    background-image: url(/museum-adaptive/images/jpg/parallax.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+    @include media-laptop {
+        height: 400px;
+    }
+
+    @include media-tablet {
+        height: 300px;
+    }
+}

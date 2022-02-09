@@ -1,0 +1,186 @@
+.header {
+    background-color: $bg-dark;
+    color: $text-color;
+    padding: 60px 0;
+    // position: fixed;
+    // width: 100%;
+    // z-index: 21;
+
+    @include media-laptop {
+        padding: 52px 0 34px 0;
+    }
+
+    @include media-tablet {
+        padding: 43px 0 34px 0;
+    }
+
+    @include media-mobile {
+        padding: 37px 0 34px 0;
+    }
+
+    .logo {
+        background-image: url(/creator252-JSFE2021Q3/museum-adaptive/images/svg/Louvre.svg);
+        background-repeat: no-repeat;
+
+        @include media-mobile {
+            background-size: 29px 16px;
+        }
+    }
+
+    .logo-text {
+        font-family: $Forum;
+        font-size: 28px;
+        line-height: 31px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        padding-left: 75px;
+
+        @include media-mobile {
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 5px;
+            padding-left: 54px;
+        }
+    }
+}
+
+.nav-list {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    list-style: none;
+    font-size: 22px;
+    font-family: $Roboto;
+    font-weight: 200;
+    line-height: 26px;
+    letter-spacing: 2px;
+    padding-right: 55px;
+
+    @include media-laptop {
+        display: none;
+    }
+
+    .nav-list-item {
+        padding-right: 37px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.burger-line {
+    position: absolute;
+    display: block;
+    height: 3px;
+    background-color: $text-color;
+    width: 32px;
+    margin-top: 19px;
+
+    @include media-mobile {
+        margin-top: 14px;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: $text-color;
+        width: 32px;
+        margin-top: -8px;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: $text-color;
+        width: 32px;
+        margin-top: -15px;
+    }
+}
+
+.burger-menu {
+    position: fixed;
+    display: none;
+    padding-right: 52px;
+    right: 0;
+    z-index: 15;
+
+    @include media-laptop {
+        display: block;
+    }
+
+    &-nav {
+        top: 0;
+        overflow-y: auto;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 35px 120px 0 55px;
+        background-color: $bg-dark;
+        left: -100%;
+        padding-left: 50px;
+        padding-top: 40px;
+        font-family: $Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 2px;
+        position: fixed;
+        z-index: 20;
+
+        &-list {
+            list-style: none;
+
+            &-item {
+                padding-bottom: 25px;
+                background-image: url(/creator252-JSFE2021Q3/museum-adaptive/images/svg/burger-arrow.svg);
+                background-position: 15px 25px;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+}
+
+.burger-menu-active {
+    padding-right: 50px;
+
+    .burger-line {
+        background-color: transparent;
+    }
+
+    .burger-line::after {
+        transform: rotate(45deg);
+    }
+
+    .burger-line::before {
+        transform: rotate(-45deg);
+        margin-top: -15px;
+    }
+
+    .burger-menu-nav {
+        left: 0;
+    }
+
+}
+
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 12;
+    top: 0;
+}
+
+.dark {
+    background-color: #fff;
+    width: 38px;
+    border-radius: 50%;
+    vertical-align: middle;
+}

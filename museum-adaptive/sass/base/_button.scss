@@ -1,0 +1,62 @@
+button {
+    cursor: pointer;
+}
+
+.button {
+    min-width: 358px;
+    background-color: $red-color;
+    color: $text-color;
+    box-sizing: border-box;
+    padding: 27px 40px;
+    font-family: $Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: $gold-color;
+    }
+
+    @include media-laptop {
+        min-width: 300px;
+        padding: 17px 34px;
+    }
+
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.tickets-button {
+    min-width: 175px;
+    color: $text-color;
+    background-color: $bg-dark;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    padding: 13px 23px;
+    box-sizing: border-box;
+    border: none;
+
+    &:hover {
+        background-color: $gold-color;
+        color: $bg-dark;
+    }
+
+    @include media-laptop {
+        padding: 11px 7px;
+    }
+}
+
+.operations {
+    min-width: 35px;
+    font-size: 18px;
+    background-color: $bg-dark;
+    border: none;
+    color: $text-color;
+}

@@ -1,0 +1,251 @@
+.tickets {
+    padding-bottom: 75px;
+
+    @include media-laptop {
+        padding-bottom: 60px;
+    }
+
+    @include media-tablet {
+        padding-bottom: 37px;
+    }
+
+    &-header {
+        padding-top: 75px;
+        @extend %headerl;
+
+        @include media-laptop {
+            padding-top: 52px;
+        }
+
+        @include media-tablet {
+            font-size: 40px;
+            line-height: 60px;
+            letter-spacing: 5px;
+            padding-top: 41px;
+        }
+
+        @include media-mobile {
+            font-size: 28px;
+            line-height: 40px;
+        }
+
+        &:after {
+            @extend %after;
+            margin-top: 22px;
+
+            @include media-laptop {
+                margin-top: 14px;
+            }
+
+            @include media-tablet {
+                margin-top: 19px;
+            }
+        }
+    }
+
+    .tick-img {
+        width: 100%;
+        max-width: 720px;
+
+        @include media-laptop {
+            max-width: 700px;
+            max-height: 440px;
+        }
+
+        @include media-tablet {
+            max-width: 444px;
+            max-height: 320px;
+        }
+
+        @include media-mobile {
+            max-width: 380px;
+            max-height: 160px;
+        }
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+        padding-top: 75px;
+
+        @include media-laptop {
+            padding-top: 59px;
+            column-gap: 41px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        @include media-tablet {
+            padding-top: 40px;
+        }
+    }
+
+    .tick-type {
+        flex-basis: 25%;
+
+
+        @include media-laptop {
+            display: none;
+        }
+
+        .tt-header {
+            padding-bottom: 50px;
+            font-family: $Roboto;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 33px;
+        }
+
+        .checkmark-container {
+            font-family: $Roboto;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 26px;
+            padding-bottom: 25px;
+            display: block;
+            position: relative;
+            cursor: pointer;
+            padding-left: 40px;
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            & input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            .checkmark {
+                position: absolute;
+                top: 2px;
+                left: 0;
+                height: 17px;
+                width: 100%;
+                max-width: 17px;
+                border: 1px solid $bg-dark;
+                border-radius: 50%;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+
+
+                &::after {
+                    top: 5px;
+                    left: 5px;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    background: $bg-dark;
+                }
+
+            }
+
+            input:checked~.checkmark::after {
+                display: block;
+            }
+        }
+
+    }
+
+    .amount {
+        width: 100%;
+        max-width: 172px;
+        text-align: right;
+
+        @include media-laptop {
+            text-align: left;
+            // max-width: 198px;
+        }
+
+        @include media-mobile {
+            padding-left: 62px;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .wr {
+            padding-left: 23px;
+
+            @include media-laptop {
+                padding-left: 0px;
+            }
+        }
+
+        &-header,
+        p {
+            padding-bottom: 24px;
+            font-family: $Roboto;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 33px;
+
+            @include media-mobile {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        .age {
+            text-align: left;
+            padding-bottom: 22px;
+            font-family: $Roboto;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 26px;
+            padding-bottom: 13px;
+        }
+
+        .age-cont {
+            padding-bottom: 9px;
+        }
+
+        .div-wrapp {
+            border: 3px solid $bg-dark;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 12px;
+
+            button {
+                width: 100%;
+                max-width: 18px;
+                border: none;
+                background-color: $text-color;
+                font-family: $Roboto;
+                font-weight: 300;
+                font-size: 36px;
+                line-height: 26px;
+                vertical-align: middle;
+            }
+        }
+
+        .number {
+            all: unset;
+            width: 100%;
+            max-width: 60px;
+            text-align: center;
+            font-family: $Roboto;
+            font-weight: 300;
+            font-size: 22px;
+            vertical-align: middle;
+            line-height: 26px;
+        }
+
+        .total {
+            padding-top: 40px;
+            padding-bottom: 56px;
+
+            @include media-laptop {
+                padding-bottom: 69px;
+                letter-spacing: 1.65px;
+                padding-top: 19px;
+            }
+        }
+    }
+}

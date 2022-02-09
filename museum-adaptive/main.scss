@@ -1,0 +1,23 @@
+// Abstracts
+@import './sass/abstracts/variables';
+@import './sass/abstracts/mixins';
+@import './sass/abstracts/placeholders';
+
+//Base
+@import './sass/base/normalize';
+@import './sass/base/button';
+//Button
+@import './sass/components/form';
+@import './sass/components/welcome';
+@import './sass/components/tour';
+@import './sass/components/explore';
+@import './sass/components/video';
+@import './sass/components/gallery';
+@import './sass/components/tickets';
+@import './sass/components/parallax';
+@import './sass/components/contacts';
+
+//Layout
+@import './sass/layout/footer';
+@import './sass/layout/header';
+@import './sass/layout/containers';

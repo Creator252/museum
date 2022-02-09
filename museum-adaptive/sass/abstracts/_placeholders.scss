@@ -1,0 +1,46 @@
+%headerdark {
+    width: 600px;
+    font-family: $Forum;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding-top: 150px;
+    font-style: normal;
+
+    @include media-laptop {
+        font-size: 50px;
+        font-weight: normal;
+    }
+
+    @include media-tablet {
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 5px;
+    }
+}
+
+%headerl {
+    font-family: $Forum;
+    font-style: normal;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $gold-color;
+
+    @include media-laptop {
+        font-size: 50px;
+        font-weight: normal;
+    }
+}
+
+%after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    max-width: 1440px;
+    background-color: $red-color;
+    margin-top: 25px;
+}
